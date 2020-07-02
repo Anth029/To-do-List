@@ -1,0 +1,103 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  background-color: #a09b9a;
+}
+
+.app {
+  margin: 10px;
+}
+
+.form {
+  display: grid;
+  gap: 10px;
+}
+
+.form__text, .form__date, .form__time {
+  padding-left: 5px;
+  font-size: 1.5em;
+  border: none;
+  border-bottom: solid tomato 2px;
+}
+
+.form__colors {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(min-content, 1fr));
+}
+
+.form__datetime {
+}
+
+.form__button {
+  background-color: #fff;
+  border: 2px solid blanchedalmond;
+  border-radius: 30px;
+  font-size: 1em;
+}
+
+.form__radio {
+  width: 3rem;
+  height: 3rem;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.form__radio:checked {
+  border: 2px solid rgb(255, 255, 255);
+}
+
+.task {
+  color: rgb(255, 255, 255);
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 20px;
+  margin-top: 10px;
+}
+
+.firstcolor {
+  background-image:
+  linear-gradient(90deg, hsla(152, 100%, 50%, .5) 0%, hsla(186, 100%, 69%, .5) 100%),
+  url(../assets/double-bubble-dark.png);
+}
+
+.secondcolor {
+  background-image:
+  linear-gradient(90deg, hsla(217, 100%, 50%, .5) 0%, hsla(186, 100%, 69%, .5) 100%),
+  url(../assets/double-bubble-dark.png);
+}
+
+.thirdcolor {
+  background-image:
+  linear-gradient(90deg, hsla(10, 82%, 65%, .5) 0%, hsla(290, 79%, 13%, .5) 100%),
+  url(../assets/double-bubble-dark.png);
+}
+
+.task p {
+  margin-top: 0;
+  margin-bottom: 0;
+} 
+
+.task__text {
+  padding-left: 10px;
+}
+
+.task__date {
+}
+
+.task__time {
+}
+
+.delete-task {
+  width: 30px;
+  height: 30px;
+  background-image: url(../assets/close.png);
+  background-size: contain;
+  cursor: pointer;
+}
