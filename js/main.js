@@ -79,6 +79,7 @@ const desplegar = () => {
     {text, color, date, time} = data,
     task = document.createElement('div'),
     deleteTask = document.createElement('div'),
+    dateContainer = document.createElement('div'),
     texto = document.createElement('p'),
     fecha = document.createElement('p'),
     hora = document.createElement('p')
@@ -86,6 +87,7 @@ const desplegar = () => {
     task.classList = `task ${color}`
     deleteTask.classList = 'delete-task'
     texto.classList = 'task__text'
+    dateContainer.classList = 'task__datetime'
     hora.classList = 'task__time'
     fecha.classList = 'task__date'
     
@@ -104,13 +106,12 @@ const desplegar = () => {
       minute: 'numeric'
     })
 
-    task.append(texto, hora, fecha, deleteTask)
+    dateContainer.append(hora, fecha)
+    task.append(texto, dateContainer, deleteTask)
     fragment.appendChild(task)
   }
   bottom.appendChild(fragment)
 }
-
-desplegar()
 
 bottom.addEventListener('click', e => {
   if (e.target.classList.value === "delete-task"){
@@ -118,3 +119,5 @@ bottom.addEventListener('click', e => {
     desplegar()
   }
 })
+
+desplegar()
