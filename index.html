@@ -9,23 +9,23 @@
 <body>
   <section class="app">
     <h1 class="title">To-do List</h1>
-      <form id="form" class="form">
-        <input type="text" name="texto" class="form__text" maxlength="50" placeholder="Título de la tarea" required>
+    <form id="form" class="form">
+      <input type="text" name="texto" class="form__text" maxlength="50" placeholder="Título de la tarea" required>
 
-        <div class="form__colors">
-          <input type="radio" name="color" class="form__radio firstcolor" value="firstcolor">
-          <input type="radio" name="color" class="form__radio secondcolor" value="secondcolor">
-          <input type="radio" name="color" class="form__radio thirdcolor" value="thirdcolor">
-        </div>
+      <div class="form__colors">
+        <input type="radio" name="color" class="form__radio firstcolor" value="firstcolor">
+        <input type="radio" name="color" class="form__radio secondcolor" value="secondcolor">
+        <input type="radio" name="color" class="form__radio thirdcolor" value="thirdcolor">
+      </div>
 
-        <div class="form__datetime">
-          <!-- El input de tipo datetime-local no funciona en Firefox -->
-          <input type="date" class="form__date" name="fecha" required>
-          <input type="time" class="form__time" name="tiempo" required>
-        </div>        
-        
-        <input type="submit" value="Submit" id="button" class="form__button">
-      </form>
+      <div class="form__datetime">
+        <!-- El input de tipo datetime-local no funciona en Firefox -->
+        <input type="date" class="form__date" name="fecha" required>
+        <input type="time" class="form__time" name="tiempo" required>
+      </div>        
+      
+      <input type="submit" value="Submit" id="button" class="form__button">
+    </form>
     <div class="bottom" id="bottom">
       <!-- Aquí se desplegarán las nuevas tareas -->
     </div>

@@ -1,6 +1,6 @@
 const form = document.getElementById('form'),
 button = document.getElementById('button'),
-bottom = document.getElementById('bottom')//Parte inferior de la app, donde estarán las tareas
+bottom = document.getElementById('bottom')
 
 form.addEventListener('submit', (e) => {
   e.preventDefault()
@@ -18,7 +18,8 @@ form.fecha.setAttribute('min', new Date().toLocaleDateString('fr-CA'))
 form.addEventListener('change', () => {
   //Avisa si el tiempo es pasado
   if (form.fecha.value === form.fecha.min) {
-    form.tiempo.setAttribute('min', new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', hour12: false }))
+    form.tiempo.setAttribute('min', new Date()
+    .toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', hour12: false }))
   }else form.tiempo.removeAttribute('min')
 
   //Obteniendo la fecha actual en ms
