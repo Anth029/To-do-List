@@ -28,17 +28,13 @@ export const timeLeft = (IncomingDate, actualDate) => {
               'minute'
             )
           } else if (IncomingDate.getMinutes() === actualDate.getMinutes()) {
-            return rtf2.format(
-              60 - actualDate.getSeconds(),
-              'second'
-            )
+            return rtf2.format(60 - actualDate.getSeconds(), 'second')
           } else return 'expired'
         } else return 'expired'
       } else return 'expired'
     } else return 'expired'
   } else return 'expired'
 }
-
 
 export const utcToMs = () => {
   const offset = new Date().getTimezoneOffset()

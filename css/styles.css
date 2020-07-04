@@ -5,16 +5,18 @@
 body {
   min-height: 100vh;
   background-color: #9c9999;
-  margin: 5px;
+  margin: 0;
 }
 
 .title {
+  margin-top: 0;
   color: #fff;
   font-weight: normal;
   text-align: center;
 }
 
 .app {
+  padding: 5px;
   min-width: 320px;
   max-width: 500px;
   margin: 0 auto;

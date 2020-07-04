@@ -2,17 +2,22 @@ import { timeLeft, utcToMs } from './date.js'
 
 const form = document.getElementById('form'),
   button = document.getElementById('button'),
-  bottom = document.getElementById('bottom')
+  bottom = document.getElementById('bottom'),
+  validate = {
+    text: false,
+    color: false,
+    date: false,
+  }
 
 form.addEventListener('submit', (e) => {
   e.preventDefault()
 })
 
-const validate = {
-  text: false,
-  color: false,
-  date: false,
-}
+form.tiempo.addEventListener('wheel', (e) => {
+  if (e.deltaY < 0) {
+    e.target.stepUp()
+  } else e.target.stepDown()
+})
 
 //Evitando que se muestren fechas anteriores a hoy
 form.fecha.setAttribute('min', new Date().toLocaleDateString('fr-CA'))
