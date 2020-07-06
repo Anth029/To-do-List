@@ -15,8 +15,8 @@ form.addEventListener('submit', (e) => {
 
 form.tiempo.addEventListener('wheel', (e) => {
   if (e.deltaY < 0) {
-    e.target.stepUp()
-  } else e.target.stepDown()
+    e.target.stepUp(15)
+  } else e.target.stepDown(15)
 })
 
 //Evitando que se muestren fechas anteriores a hoy
@@ -33,7 +33,11 @@ form.addEventListener('change', () => {
         hour12: false,
       })
     )
-  } else form.tiempo.removeAttribute('min')
+    form.tiempo.setAttribute('max','23:59')
+  } else {
+    form.tiempo.removeAttribute('min')
+    form.tiempo.removeAttribute('max')
+  }
 
   //Validando que la fecha sea mayor a la actual
   const esFechaValida =
