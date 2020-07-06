@@ -33,11 +33,7 @@ form.addEventListener('change', () => {
         hour12: false,
       })
     )
-    form.tiempo.setAttribute('max','23:59')
-  } else {
-    form.tiempo.removeAttribute('min')
-    form.tiempo.removeAttribute('max')
-  }
+  } else form.tiempo.removeAttribute('min')
 
   //Validando que la fecha sea mayor a la actual
   const esFechaValida =
